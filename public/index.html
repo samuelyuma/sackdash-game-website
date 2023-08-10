@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./css/tailwind.css" rel="stylesheet" />
+        <script src="./js/game.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Khand:wght@600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <section
+            id="navbar"
+            class="items-center justify-center border-b-2 border-main-black bg-main-white px-40"
+        >
+            <!-- navbar done -->
+            <div class="flex items-center justify-between py-4">
+                <h1 class="font-khand text-4xl font-semibold text-main-black">
+                    SackDash.
+                </h1>
+                <ul
+                    class="flex cursor-pointer gap-12 font-jetbrains text-main-black"
+                >
+                    <li class="transition-all hover:text-secondary-blue">
+                        About
+                    </li>
+                    <li
+                        class="tracking-wider transition-all hover:text-secondary-blue"
+                    >
+                        Game
+                    </li>
+                    <li class="transition-all hover:text-secondary-blue">
+                        Creator
+                    </li>
+                </ul>
+                <button
+                    class="rounded-xl border-2 border-main-black bg-secondary-blue px-10 py-2 font-khand text-lg tracking-wider text-white drop-shadow-lg transition-all hover:bg-secondary-blue-hover"
+                >
+                    Play
+                </button>
+            </div>
+        </section>
+
+        <section id="hero">
+            <!-- hero done -->
+            <div class="flex gap-4 bg-primary-red px-40 py-26">
+                <div class="flex w-1/2 flex-col justify-center gap-4">
+                    <h1 class="font-khand text-6xl text-white">
+                        Race to Victory in the Ultimate Online Sack Race!
+                    </h1>
+                    <p class="font-jetbrains text-xl text-main-white">
+                        Strap on your virtual sack, dash towards victory, and
+                        prove that you're the ultimate sack race champion!
+                    </p>
+                    <button
+                        class="mt-4 w-48 rounded-full border-2 border-main-black bg-accent-yellow px-6 py-4 font-khand text-3xl text-main-black drop-shadow-xl transition-all hover:bg-accent-yellow-hover"
+                    >
+                        Play Now!
+                    </button>
+                </div>
+                <div class="flex w-1/2 items-center justify-end">
+                    <img
+                        src="img/hero-video-sample.jpg"
+                        alt=""
+                        class="w-3/4 rounded-xl"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <!-- about done -->
+            <div
+                class="flex gap-4 border-b-2 border-main-black bg-main-white px-40 py-26"
+            >
+                <div class="flex w-3/4 items-center justify-start">
+                    <img
+                        src="./img/about-photo.jpg"
+                        alt=""
+                        class="aspect-square w-about-photo rounded-xl object-cover"
+                    />
+                </div>
+                <div class="flex w-3/4 flex-col justify-center gap-14">
+                    <h1
+                        class="font-khand text-5xl font-semibold text-main-black"
+                    >
+                        About This Game
+                    </h1>
+                    <p class="font-jetbrains text-2xl text-main-black">
+                        The making of this game was inspired by one of the
+                        traditional games that were often contested during the
+                        independence day celebrations, namely "sack racing".
+                        This game was created to provide a fun playing
+                        experience for all ages and can be accessed easily
+                        through the website. With attractive pixel-shaped
+                        visuals and simple gameplay, we hope this game will
+                        entertain each of you!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="creators">
+            <!-- creators done -->
+            <div class="bg-main-white pb-12 text-center">
+                <h1
+                    class="py-12 font-khand text-5xl font-semibold text-main-black"
+                >
+                    Creators Behind This Website
+                </h1>
+                <div class="flex justify-center gap-44">
+                    <div class="w-72 text-center">
+                        <div class="mx-auto">
+                            <img
+                                src="./img/Marcel.jpg"
+                                alt="Yuma's photo"
+                                class="mb-4 h-auto max-w-full rounded-xl"
+                            />
+                        </div>
+                        <h1 class="font-khand text-3xl text-main-black">
+                            @mreezx
+                        </h1>
+                        <p class="font-jetbrains text-xl text-main-black">
+                            Programmer
+                        </p>
+                    </div>
+                    <div class="w-72 text-center">
+                        <div class="mx-auto">
+                            <img
+                                src="./img/Yuma.jpg"
+                                alt="Yuma's photo"
+                                class="mb-4 h-auto max-w-full rounded-xl"
+                            />
+                        </div>
+                        <h1 class="font-khand text-3xl text-main-black">
+                            @samuelyumaa
+                        </h1>
+                        <p class="font-jetbrains text-xl text-main-black">
+                            Programmer
+                        </p>
+                    </div>
+                    <div class="w-72 text-center">
+                        <div class="mx-auto">
+                            <img
+                                src="./img/Jauhar.jpg"
+                                alt="Yuma's photo"
+                                class="mb-4 h-auto max-w-full rounded-xl"
+                            />
+                        </div>
+                        <h1 class="font-khand text-3xl text-main-black">
+                            @jauhar.exe
+                        </h1>
+                        <p class="font-jetbrains text-xl text-main-black">
+                            Asset Designer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <!-- footer done -->
+            <h1
+                class="bg-main-black py-3 text-center font-khand text-xl font-semibold tracking-wide text-main-white"
+            >
+                ©2023 I Miss Her Store. All copyright protected by law
+            </h1>
+        </section>
+    </body>
+</html>
+
+<!-- npm run build -->
