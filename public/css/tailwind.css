@@ -517,7 +517,7 @@ video {
   width: 18rem;
 }
 .w-about-photo {
-  width: 89%;
+  width: 83%;
 }
 .max-w-full {
   max-width: 100%;
@@ -662,6 +662,10 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xl {
   font-size: 1.25rem;

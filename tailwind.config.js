@@ -18,7 +18,7 @@ module.exports = {
             },
             spacing: {
                 26: '110px',
-                'about-photo': '89%',
+                'about-photo': '83%',
             },
         },
     },
