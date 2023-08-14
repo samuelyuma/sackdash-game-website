@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-const canvas = document.getElementById("board");
+const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
-canvas.width = 1920;
-canvas.height = 1080;
+canvas.width = 1024;
+canvas.height = 576;
 
 const backgroundImage = new Image();
 backgroundImage.src = "../src/img/bg.svg";
@@ -16,7 +15,7 @@ class Player {
     };
 
     const image = new Image();
-    image.src = src="../src/img/bg.png";
+    image.src = "../src/img/player.png";
     image.onload = () => {
       const scale = 1;
       this.image = image;
@@ -213,4 +212,3 @@ addEventListener("keyup", ({ key }) => {
 
 spawnObstacleWithRandomTime();
 animate();
-})

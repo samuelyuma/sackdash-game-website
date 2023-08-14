@@ -4,13 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./css/tailwind.css" rel="stylesheet" />
-        <script src="./js/game.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Khand:wght@600&display=swap"
             rel="stylesheet"
         />
+        <script src="../public/js/game.js"></script>
     </head>
 
     <body>
@@ -45,7 +45,6 @@
                 </button>
             </div>
         </section>
-
         <section id="hero">
             <!-- hero done -->
             <div class="flex gap-4 bg-primary-red px-40 py-26">
@@ -108,6 +107,12 @@
                     </p>
                 </div>
             </div>
+        </section>
+
+        <section class="bg-primary-red">
+        <div class="canvas-container" >
+            <canvas id="board"></canvas>
+          </div>
         </section>
 
         <section id="creators">
