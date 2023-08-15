@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>⚡ SackDash</title>
         <link href="./css/tailwind.css" rel="stylesheet" />
         <script src="./js/game.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,7 +49,7 @@
 
         <section id="hero">
             <!-- hero done -->
-            <div class="flex gap-4 bg-primary-red px-40 py-26">
+            <div class="flex gap-4 bg-primary-red px-40 py-34">
                 <div class="flex w-1/2 flex-col justify-center gap-4">
                     <h1 class="font-khand text-6xl text-white">
                         Hop Along in the Ultimate Sack Race Experience!
@@ -75,9 +76,7 @@
 
         <section id="about">
             <!-- about done -->
-            <div
-                class="flex gap-4 border-b-2 border-main-black bg-main-white px-40 py-26"
-            >
+            <div class="flex gap-4 bg-main-white px-40 py-34">
                 <figure
                     class="flex w-3/4 flex-col items-center justify-start gap-4"
                 >
@@ -110,11 +109,21 @@
             </div>
         </section>
 
+        <section id="game">
+            <!-- game done -->
+            <div
+                class="flex justify-center justify-self-center bg-primary-red p-28"
+            >
+                <canvas></canvas>
+            </div>
+            <script src="./js/script.js"></script>
+        </section>
+
         <section id="creators">
             <!-- creators done -->
-            <div class="bg-main-white pb-12 text-center">
+            <div class="bg-main-white pb-16 text-center">
                 <h1
-                    class="py-12 font-khand text-5xl font-semibold text-main-black"
+                    class="py-16 font-khand text-5xl font-semibold text-main-black"
                 >
                     Creators Behind This Website
                 </h1>
@@ -173,7 +182,7 @@
             <h1
                 class="bg-main-black py-3 text-center font-khand text-xl font-semibold tracking-wide text-main-white"
             >
-                ©2023 I Miss Her Store. All copyright protected by law
+                ©2023 SackDash.
             </h1>
         </section>
     </body>

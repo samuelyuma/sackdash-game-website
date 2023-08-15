@@ -485,6 +485,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.m-auto {
+  margin: auto;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -555,11 +558,17 @@ video {
 .gap-44 {
   gap: 11rem;
 }
+.justify-self-center {
+  justify-self: center;
+}
 .rounded-full {
   border-radius: 9999px;
 }
 .rounded-xl {
   border-radius: 0.75rem;
+}
+.border {
+  border-width: 1px;
 }
 .border-2 {
   border-width: 2px;
@@ -595,6 +604,9 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.p-28 {
+  padding: 7rem;
+}
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -607,28 +619,28 @@ video {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-26 {
-  padding-top: 110px;
-  padding-bottom: 110px;
-}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+.py-34 {
+  padding-top: 132px;
+  padding-bottom: 132px;
 }
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.pb-12 {
-  padding-bottom: 3rem;
+.pb-16 {
+  padding-bottom: 4rem;
 }
 .text-center {
   text-align: center;

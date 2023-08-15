@@ -17,7 +17,7 @@ module.exports = {
                 jetbrains: ['"JetBrains Mono"', 'monospace'],
             },
             spacing: {
-                26: '110px',
+                34: '132px',
                 'about-photo': '83%',
             },
         },
