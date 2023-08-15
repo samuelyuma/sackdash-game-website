@@ -79,6 +79,7 @@ class Obstacle {
       this.image = obstacleImage;
       this.width = obstacleImage.width * scale;
       this.height = obstacleImage.height * scale;
+      // setting posisi random
       this.position = {
         x: Math.random() * (650 - 280) + 280, // Random x-coordinate
         y: 0,
@@ -143,7 +144,7 @@ function spawnObstacle() {
   const obstacle = new Obstacle();
   obstacles.push(obstacle);
 }
-
+// setting interval waktu
 function spawnObstacleWithRandomTime() {
   spawnObstacle();
   const minSpawnInterval = 2000;
