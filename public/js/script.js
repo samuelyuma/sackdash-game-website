@@ -180,10 +180,15 @@ function playBackgroundMusic() {
 
     backgroundMusic.play(); // Start playing the music
 }
-
+let animationPaused = true;
 let gameOver = false
 let timeSinceLastCollision = 0
 function animate() {
+    if (animationPaused) {
+        requestAnimationFrame(animate)
+        c.drawImage(backgroundImage, 0, 0)
+        return;
+    }
     if (!gameOver) {
         playBackgroundMusic();
         requestAnimationFrame(animate)
@@ -288,7 +293,12 @@ function animate() {
     }
     clearObstacles()
 }
-
+addEventListener('click', () => {
+    animationPaused = !animationPaused; // Toggle the animationPaused variable
+    if (!animationPaused) {
+        animate(); // If unpaused, start the animation loop
+    }
+});
 addEventListener('keydown', ({key}) => {
     switch (key) {
         case 'a':
