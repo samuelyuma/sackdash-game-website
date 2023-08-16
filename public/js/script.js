@@ -140,6 +140,12 @@ function detectCollision(a, b) {
     )
 }
 
+function stopBackgroundMusic() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0; // Reset the playback position
+}
+
 function spawnObstacle() {
     const obstacle = new Obstacle()
     obstacles.push(obstacle)
@@ -162,10 +168,24 @@ function clearObstacles() {
     }
 }
 
+function playBackgroundMusic() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    backgroundMusic.addEventListener('ended', () => {
+        backgroundMusic.currentTime = 0; // Reset the playback position
+        if (!gameOver) {
+            backgroundMusic.play(); // Start playing from the beginning if the game is not over
+        }
+    });
+
+    backgroundMusic.play(); // Start playing the music
+}
+
 let gameOver = false
 let timeSinceLastCollision = 0
 function animate() {
     if (!gameOver) {
+        playBackgroundMusic();
         requestAnimationFrame(animate)
         c.clearRect(0, 0, canvas.width, canvas.height)
         c.drawImage(backgroundImage, 0, 0)
@@ -175,6 +195,7 @@ function animate() {
             if (detectCollision(player, obstacle)) {
                 console.log('Collision detected!')
                 gameOver = true
+                stopBackgroundMusic()
             }
         }
 
