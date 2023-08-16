@@ -66,6 +66,11 @@ class Obstacle {
             '../src/img/Asset 1.png',
             '../src/img/Asset 2.png',
             '../src/img/Asset 3.png',
+            '../src/img/Asset 4.png',
+            '../src/img/Asset 5.png',
+            '../src/img/Asset 6.png',
+            '../src/img/Asset 7.png',
+            '../src/img/Asset 8.png',
             // Add more image sources here
         ]
 
@@ -180,15 +185,11 @@ function playBackgroundMusic() {
 
     backgroundMusic.play(); // Start playing the music
 }
-let animationPaused = true;
+
 let gameOver = false
 let timeSinceLastCollision = 0
 function animate() {
-    if (animationPaused) {
-        requestAnimationFrame(animate)
-        c.drawImage(backgroundImage, 0, 0)
-        return;
-    }
+
     if (!gameOver) {
         playBackgroundMusic();
         requestAnimationFrame(animate)
@@ -293,12 +294,7 @@ function animate() {
     }
     clearObstacles()
 }
-addEventListener('click', () => {
-    animationPaused = !animationPaused; // Toggle the animationPaused variable
-    if (!animationPaused) {
-        animate(); // If unpaused, start the animation loop
-    }
-});
+
 addEventListener('keydown', ({key}) => {
     switch (key) {
         case 'a':
@@ -321,6 +317,26 @@ addEventListener('keydown', ({key}) => {
                 animate()
             }
             break
+            case 'ArrowLeft':
+                keys.a.pressed = true
+                if (gameOver) {
+                    player.position.x = canvas.width / 2 - player.width / 57
+                    player.position.y = canvas.height - player.height * 1.5
+                    obstacles.length = 0
+                    gameOver = false
+                    animate()
+                }
+                break
+                case 'ArrowRight':
+                    keys.d.pressed = true
+                    if (gameOver) {
+                        player.position.x = canvas.width / 2 - player.width / 57
+                        player.position.y = canvas.height - player.height * 1.5
+                        obstacles.length = 0
+                        gameOver = false
+                        animate()
+                    }
+                    break
     }
 })
 
@@ -330,6 +346,12 @@ addEventListener('keyup', ({key}) => {
             keys.a.pressed = false
             break
         case 'd':
+            keys.d.pressed = false
+            break
+        case 'ArrowLeft':
+            keys.a.pressed = false
+            break
+        case 'ArrowRight':
             keys.d.pressed = false
             break
     }

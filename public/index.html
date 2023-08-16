@@ -1,11 +1,18 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>⚡ SackDash</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link href="./css/tailwind.css" rel="stylesheet" />
-        <script src="./js/game.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -28,22 +35,24 @@
                     class="flex cursor-pointer gap-12 font-jetbrains text-main-black"
                 >
                     <li class="transition-all hover:text-secondary-blue">
-                        About
+                        <a href="#HowToPlay">How To Play</a>
                     </li>
                     <li
                         class="tracking-wider transition-all hover:text-secondary-blue"
                     >
-                        Game
+                        <a href="#Game">Game</a>
                     </li>
                     <li class="transition-all hover:text-secondary-blue">
-                        Creator
+                        <a href="#Creators">Creator</a>
                     </li>
                 </ul>
-                <button
-                    class="rounded-xl border-2 border-main-black bg-secondary-blue px-10 py-2 font-khand text-lg tracking-wider text-white drop-shadow-lg transition-all hover:bg-secondary-blue-hover"
-                >
-                    Play
-                </button>
+                <a href="#Game">
+                    <button
+                        class="rounded-xl border-2 border-main-black bg-secondary-blue px-10 py-2 font-khand text-lg tracking-wider text-white drop-shadow-lg transition-all hover:bg-secondary-blue-hover"
+                    >
+                        Play
+                    </button>
+                </a>
             </div>
         </section>
 
@@ -58,69 +67,73 @@
                         Strap on your virtual sack, hop over every obstacles,
                         and prove that you're the ultimate sack race champion!
                     </p>
-                    <button
-                        class="mt-4 w-48 rounded-full border-2 border-main-black bg-accent-yellow px-6 py-4 font-khand text-3xl text-main-black drop-shadow-xl transition-all hover:bg-accent-yellow-hover"
-                    >
-                        Play Now!
-                    </button>
+                    <a href="#Game">
+                        <button
+                            class="mt-4 w-48 rounded-full border-2 border-main-black bg-accent-yellow px-6 py-4 font-khand text-3xl text-main-black drop-shadow-xl transition-all hover:bg-accent-yellow-hover"
+                        >
+                            Play Now!
+                        </button>
+                    </a>
                 </div>
                 <div class="flex w-1/2 items-center justify-end">
-<video autoplay controls>
-    <source src="../src/video/heroVid.mp4" type="video/mp4">
-</video>
+                    <video src="../src/video/heroVid.mp4" autoplay loop muted class="w-3/4 rounded-lg">
+
                 </div>
             </div>
         </section>
 
-        <section id="about">
+        <section id="HowToPlay">
             <!-- about done -->
-            <div class="flex gap-4 bg-main-white px-40 py-34">
-                <figure
-                    class="flex w-3/4 flex-col items-center justify-start gap-4"
-                >
-                    <img
-                        src="./img/about-photo.jpg"
-                        alt=""
-                        class="aspect-square w-about-photo rounded-xl object-cover"
-                    />
-                    <figcaption class="font-jetbrains text-sm text-main-black">
-                        Credit photo: I Gede Lila Kantiana on Flickr
-                    </figcaption>
-                </figure>
-                <div class="flex w-3/4 flex-col justify-center gap-14">
+            <div class="bg-main-white py-36 pl-40">
+                <div class="flex w-full flex-col justify-center gap-8">
                     <h1
-                        class="font-khand text-5xl font-semibold text-main-black"
+                        class="font-khand text-6xl font-semibold text-main-black"
                     >
-                        About This Game
+                        How To Play
+                    </h1>
+                    <ul
+                        class="mb-24 flex list-disc flex-col gap-4 pl-6 font-jetbrains text-2xl text-main-black"
+                    >
+                        <li>
+                            Control the player by pressing a/arrowleft and
+                            d/arrowright to move left and right
+                        </li>
+                        <li>Score most point by surviving against obstacle</li>
+                        <li>
+                            Reset the game by pressing play button or the
+                            player's movement input
+                        </li>
+                        <li>Lastly, have fun playing!</li>
+                    </ul>
+                </div>
+                <div class="flex w-full flex-col justify-center gap-8">
+                    <h1
+                        class="font-khand text-6xl font-semibold text-primary-red"
+                    >
+                        DISCLAIMER!
                     </h1>
                     <p class="font-jetbrains text-2xl text-main-black">
-                        The making of this game was inspired by one of the
-                        traditional games that were often contested during the
-                        independence day celebrations, namely "sack racing".
-                        This game was created to provide a fun playing
-                        experience for all ages and can be accessed easily
-                        through the website. With attractive pixel-shaped
-                        visuals and simple gameplay, we hope this game will
-                        entertain each of you!
+                        Avoid going to another tab when this game is loading,
+                        issues like excessive obstacle's spawning might occur.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="game">
+        <section id="Game">
             <!-- game done -->
             <div
                 class="flex justify-center justify-self-center bg-primary-red p-28"
             >
                 <canvas></canvas>
                 <audio id="backgroundMusic" loop>
-                    <source src="../src/audio/bgMusic.mp3" type="audio/mp3">
+                    <source src="../src/audio/bgMusic.mp3" type="audio/mp3" />
                 </audio>
             </div>
             <script src="./js/script.js"></script>
         </section>
 
-        <section id="creators">
+        <section id="Creators">
             <!-- creators done -->
             <div class="bg-main-white pb-16 text-center">
                 <h1
@@ -186,6 +199,27 @@
                 ©2023 SackDash.
             </h1>
         </section>
+
+        <button
+            style="
+                position: fixed;
+                bottom: 64px;
+                right: 48px;
+                display: none;
+                height: 48px;
+                width: 48px;
+                border-radius: 8px;
+                background-color: #fccb1d;
+                font-size: 24px;
+                box-shadow:
+                    0 10px 15px -3px rgb(0 0 0 / 0.1),
+                    0 4px 6px -4px rgb(0 0 0 / 0.1);
+            "
+            id="topBtn"
+        >
+            <i class="fa-solid fa-arrow-up" style="color: #313638"></i>
+        </button>
+        <script type="text/javascript" src="./js/button.js"></script>
     </body>
 </html>
 
