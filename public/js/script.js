@@ -188,6 +188,8 @@ function playBackgroundMusic() {
 
 let gameOver = false
 let timeSinceLastCollision = 0
+let playButtonHover = false;
+
 function animate() {
 
     if (!gameOver) {
@@ -223,75 +225,46 @@ function animate() {
         }
     } else {
         // Darken the background with a black overlay
-        c.fillStyle = 'rgba(0, 0, 0, 0.5)'
-        c.fillRect(0, 0, canvas.width, canvas.height)
+        c.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        c.fillRect(0, 0, canvas.width, canvas.height);
 
         // Set the styles for the text
-        c.fillStyle = '#ffffff'
-        c.font = '72px Khand, Arial' // Changed font size for the "Game Over" text
-        const gameOverText = 'Game Over!'
-        const scoreText = 'Score:' + score
+        c.fillStyle = '#ffffff';
+        c.font = '72px Khand, Arial'; // Changed font size for the "Game Over" text
+        const gameOverText = 'Game Over!';
+        const scoreText = 'Score: ' + score;
+        const playAgainText1 = "Press one of the following keys to play again:";
+        const playAgainText2 = "'a', 'd', arrow right, arrow left";
 
-        const gameOverTextWidth = c.measureText(gameOverText).width
-        const scoreTextWidth = c.measureText(scoreText).width
+        const gameOverTextWidth = c.measureText(gameOverText).width;
+        const scoreTextWidth = c.measureText(scoreText).width;
+        const playAgainText1Width = c.measureText(playAgainText1).width;
+        const playAgainText2Width = c.measureText(playAgainText2).width;
 
-        const gameOverTextX = canvas.width / 2 - gameOverTextWidth / 2
-        const gameOverTextY = canvas.height / 2 - 60 // Adjusted Y position for vertical centering
-        const scoreTextX = canvas.width / 2 - scoreTextWidth / 2 - 6
-        const scoreTextY = canvas.height / 2 + 10 // Adjusted Y position for vertical centering
+        const gameOverTextX = canvas.width / 2 - gameOverTextWidth / 2;
+        const gameOverTextY = canvas.height / 2 - 60; // Adjusted Y position for vertical centering
+        const scoreTextX = canvas.width / 2 - scoreTextWidth / 2 - 6;
+        const scoreTextY = canvas.height / 2 + 15; // Adjusted Y position for vertical centering
+
+        // Calculate the width of the longer line of playAgainText
+        const maxPlayAgainTextWidth = Math.max(playAgainText1Width, playAgainText2Width);
+
+        const playAgainText1X = canvas.width / 2 - maxPlayAgainTextWidth / 2 + 315; // Centered horizontally
+        const playAgainText1Y = scoreTextY + 60; // Positioned under the score text
+        const playAgainText2X = canvas.width / 2 - playAgainText2Width / 2 + 190; // Centered horizontally under playAgainText1
+        const playAgainText2Y = playAgainText1Y + 30; // Positioned below playAgainText1
 
         // Draw the text on the canvas
-        c.fillText(gameOverText, gameOverTextX, gameOverTextY)
+        c.fillText(gameOverText, gameOverTextX, gameOverTextY);
 
-        c.font = '48px "JetBrains Mono", Arial' // Changed font and size for the score text
-        c.fillText(scoreText, scoreTextX, scoreTextY) // Centered score text
+        c.font = '48px "JetBrains Mono", Arial'; // Changed font and size for the score text
+        c.fillText(scoreText, scoreTextX, scoreTextY); // Centered score text
 
-        // Add a "Play" button
-        const playButtonWidth = 170 // Adjusted weight for the button
-        const playButtonHeight = 56 // Adjusted height for the button
-        const playButtonX = canvas.width / 2 - playButtonWidth / 2
-        const playButtonY = canvas.height / 2 + 50 // Adjusted Y position for vertical centering
-
-        // Draw the button with a border and border radius
-        c.fillStyle = '#FC4D40'
-        c.fillRect(playButtonX, playButtonY, playButtonWidth, playButtonHeight)
-        c.strokeStyle = '#ffffff'
-        c.lineWidth = 3
-        c.strokeRect(
-            playButtonX,
-            playButtonY,
-            playButtonWidth,
-            playButtonHeight
-        )
-
-        c.fillStyle = '#ffffff'
-        c.font = '36px Khand, Arial'
-        c.fillText('Play Again', playButtonX + 17, playButtonY + 38)
-
-        // Add event listener for cursor change on button hover
-        canvas.style.cursor = 'default' // Set default cursor initially
-
-        canvas.addEventListener('mousemove', (event) => {
-            if (!gameOver) {
-                canvas.style.cursor = 'default'
-                return // No need to proceed if game is not over
-            }
-
-            const mouseX = event.clientX - canvas.getBoundingClientRect().left
-            const mouseY = event.clientY - canvas.getBoundingClientRect().top
-
-            if (
-                mouseX >= playButtonX &&
-                mouseX <= playButtonX + playButtonWidth &&
-                mouseY >= playButtonY &&
-                mouseY <= playButtonY + playButtonHeight
-            ) {
-                canvas.style.cursor = 'pointer'
-            } else {
-                canvas.style.cursor = 'default'
-            }
-        })
+        c.font = '20px "JetBrains Mono", Arial'; // Changed font and size for the play again text
+        c.fillText(playAgainText1, playAgainText1X, playAgainText1Y);
+        c.fillText(playAgainText2, playAgainText2X, playAgainText2Y); // Centered under playAgainText1
     }
+
     clearObstacles()
 }
 
@@ -354,33 +327,6 @@ addEventListener('keyup', ({key}) => {
         case 'ArrowRight':
             keys.d.pressed = false
             break
-    }
-})
-
-addEventListener('click', function (event) {
-    if (gameOver) {
-        const playButtonWidth = 100
-        const playButtonHeight = 40
-
-        const playButtonX = canvas.width / 2 - playButtonWidth / 2
-        const playButtonY = canvas.height / 2 + 80
-
-        const clickX = event.clientX - canvas.getBoundingClientRect().left
-        const clickY = event.clientY - canvas.getBoundingClientRect().top
-
-        if (
-            clickX > playButtonX &&
-            clickX < playButtonX + playButtonWidth &&
-            clickY > playButtonY &&
-            clickY < playButtonY + playButtonHeight
-        ) {
-            player.position.x = canvas.width / 2 - player.width / 57
-            player.position.y = canvas.height - player.height * 1.5
-            obstacles.length = 0
-            gameOver = false
-            timeSinceLastCollision = 0
-            animate()
-        }
     }
 })
 
