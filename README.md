@@ -16,6 +16,6 @@ cd sackdash-game-website
 # install the dependencies
 npm install
 
-# run the development server
-npm run build
+# run the apps
+npm run tailwind
 ```
