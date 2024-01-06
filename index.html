@@ -1,53 +1,42 @@
-<!doctype html>
-<html class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>⚡ SackDash</title>
-        <script src="./public/js/script.js"></script>
+        <title>⚡ SackDash Game</title>
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link href="./public/css/tailwind.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./src/css/output.css" />
         <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Khand:wght@600&display=swap"
-        rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Khand:wght@600&display=swap"
+            rel="stylesheet"
         />
     </head>
-
     <body>
-        <section
-            id="navbar"
-            class="items-center justify-center border-b-2 border-main-black bg-main-white px-40"
-        >
-            <!-- navbar done -->
+        <nav class="items-center justify-center border-b-2 border-main-black bg-main-white px-40">
             <div class="flex items-center justify-between py-4">
-                <h1 class="font-khand text-4xl font-semibold text-main-black">
-                    SackDash.
-                </h1>
-                <ul
-                    class="flex cursor-pointer gap-12 font-jetbrains text-main-black"
-                >
+                <h1 class="font-khand text-4xl font-semibold text-main-black">SackDash.</h1>
+                <ul class="flex cursor-pointer gap-12 font-jetbrains text-main-black">
                     <li class="transition-all hover:text-secondary-blue">
-                        <a href="#HowToPlay">How To Play</a>
+                        <a href="#how-to-play">How To Play</a>
                     </li>
-                    <li
-                        class="tracking-wider transition-all hover:text-secondary-blue"
-                    >
-                        <a href="#Game">Game</a>
+                    <li class="tracking-wider transition-all hover:text-secondary-blue">
+                        <a href="#game">Game</a>
                     </li>
                     <li class="transition-all hover:text-secondary-blue">
-                        <a href="#Creators">Creator</a>
+                        <a href="#creators">Creator</a>
                     </li>
                 </ul>
-                <a href="#Game">
+                <a href="#game">
                     <button
                         class="rounded-xl border-2 border-main-black bg-secondary-blue px-10 py-2 font-khand text-lg tracking-wider text-white drop-shadow-lg transition-all hover:bg-secondary-blue-hover"
                     >
@@ -55,150 +44,98 @@
                     </button>
                 </a>
             </div>
-        </section>
+        </nav>
 
-        <section id="hero">
-            <!-- hero done -->
-            <div class="flex gap-4 bg-primary-red px-40 py-34">
-                <div class="flex w-1/2 flex-col justify-center gap-4">
-                    <h1 class="font-khand text-6xl text-white">
-                        Hop Along in the Ultimate Sack Race Experience!
-                    </h1>
-                    <p class="font-jetbrains text-xl text-white">
-                        Strap on your virtual sack, hop over every obstacles,
-                        and prove that you're the ultimate sack race champion!
-                    </p>
-                    <a href="#Game">
-                        <button
-                            class="mt-4 w-48 rounded-full border-2 border-main-black bg-accent-yellow px-6 py-4 font-khand text-3xl text-main-black drop-shadow-xl transition-all hover:bg-accent-yellow-hover"
-                        >
-                            Play Now!
-                        </button>
-                    </a>
-                </div>
-                <div class="flex w-1/2 items-center justify-end">
-                    <video src="./src/video/heroVid.mp4" autoplay loop muted class="w-3/4 rounded-lg">
-
-                </div>
-            </div>
-        </section>
-
-        <section id="HowToPlay">
-            <!-- about done -->
-            <div class="bg-main-white py-36 pl-40">
-                <div class="flex w-full flex-col justify-center gap-8">
-                    <h1
-                        class="font-khand text-6xl font-semibold text-main-black"
+        <header id="hero" class="flex gap-4 bg-primary-red px-40 py-34">
+            <div class="flex w-1/2 flex-col justify-center gap-4">
+                <h1 class="font-khand text-6xl text-white">Hop Along in the Ultimate Sack Race Experience!</h1>
+                <p class="font-jetbrains text-xl text-white">
+                    Strap on your virtual sack, hop over every obstacles, and prove that you're the ultimate sack race
+                    champion!
+                </p>
+                <a href="#game">
+                    <button
+                        class="mt-4 w-48 rounded-full border-2 border-main-black bg-accent-yellow px-6 py-4 font-khand text-3xl text-main-black drop-shadow-xl transition-all hover:bg-accent-yellow-hover"
                     >
-                        How To Play
-                    </h1>
-                    <ul
-                        class="mb-24 flex list-disc flex-col gap-4 pl-6 font-jetbrains text-2xl text-main-black"
-                    >
-                        <li>
-                            Control the player by pressing a/arrowleft and
-                            d/arrowright to move left and right
-                        </li>
-                        <li>Score most point by surviving against obstacle</li>
-                        <li>
-                            Reset the game by pressing play button or the
-                            player's movement input
-                        </li>
-                        <li>Lastly, have fun playing!</li>
-                    </ul>
-                </div>
-                <div class="flex w-full flex-col justify-center gap-8">
-                    <h1
-                        class="font-khand text-6xl font-semibold text-primary-red"
-                    >
-                        DISCLAIMER!
-                    </h1>
-                    <p class="font-jetbrains text-2xl text-main-black">
-                        Avoid going to another tab when this game is loading,
-                        issues like excessive obstacle's spawning might occur.
-                    </p>
-                </div>
+                        Play Now!
+                    </button>
+                </a>
+            </div>
+            <div class="flex w-1/2 items-center justify-end">
+                <video src="./src/video/heroVid.mp4" autoplay loop muted class="w-3/4 rounded-lg"></video>
+            </div>
+        </header>
+
+        <section id="how-to-play" class="bg-main-white py-36 pl-40">
+            <div class="flex w-full flex-col justify-center gap-8">
+                <h1 class="font-khand text-6xl font-semibold text-main-black">How To Play</h1>
+                <ul class="mb-24 flex list-disc flex-col gap-4 pl-6 font-jetbrains text-2xl text-main-black">
+                    <li>Control the player by pressing a/arrowleft and d/arrowright to move left and right</li>
+                    <li>Score most point by surviving against obstacle</li>
+                    <li>Reset the game by pressing play button or the player's movement input</li>
+                    <li>Lastly, have fun playing!</li>
+                </ul>
+            </div>
+            <div class="flex w-full flex-col justify-center gap-8">
+                <h1 class="font-khand text-6xl font-semibold text-primary-red">DISCLAIMER!</h1>
+                <p class="font-jetbrains text-2xl text-main-black">
+                    Avoid going to another tab when this game is loading, issues like excessive obstacle's spawning
+                    might occur.
+                </p>
             </div>
         </section>
 
-        <section id="Game">
-            <!-- game done -->
-            <div
-                class="flex justify-center justify-self-center bg-primary-red p-28"
-            >
-                <canvas></canvas>
-                <audio id="backgroundMusic" loop>
-                    <source src="./src/audio/bgMusic.mp3" type="audio/mp3" />
-                </audio>
-            </div>
+        <section id="game" class="flex justify-center justify-self-center bg-primary-red p-28">
+            <canvas></canvas>
+            <audio id="backgroundMusic" loop>
+                <source src="./src/audio/background-music.mp3" type="audio/mp3" />
+            </audio>
         </section>
 
-        <section id="Creators">
-            <!-- creators done -->
-            <div class="bg-main-white pb-16 text-center">
-                <h1
-                    class="py-16 font-khand text-5xl font-semibold text-main-black"
-                >
-                    Creators Behind This Website
-                </h1>
-                <div class="flex justify-center gap-44">
-                    <div class="w-72 text-center">
-                        <div class="mx-auto">
-                            <img
-                                src="./public/img-creators/Marcel.jpg"
-                                alt="Marcel's photo"
-                                class="mb-4 h-auto max-w-full rounded-xl"
-                            />
-                        </div>
-                        <h1 class="font-khand text-3xl text-main-black">
-                            @mreezx
-                        </h1>
-                        <p class="font-jetbrains text-xl text-main-black">
-                            Programmer
-                        </p>
+        <section id="creators" class="bg-main-white pb-16 text-center">
+            <h1 class="py-16 font-khand text-5xl font-semibold text-main-black">Creators Behind This Website</h1>
+            <div class="flex justify-center gap-44">
+                <div class="w-72 text-center">
+                    <div class="mx-auto">
+                        <img
+                            src="./src/img-creators/Marcel.jpg"
+                            alt="Marcel's photo"
+                            class="mb-4 h-auto max-w-full rounded-xl"
+                        />
                     </div>
-                    <div class="w-72 text-center">
-                        <div class="mx-auto">
-                            <img
-                                src="./public/img-creators/Yuma.jpg"
-                                alt="Yuma's photo"
-                                class="mb-4 h-auto max-w-full rounded-xl"
-                            />
-                        </div>
-                        <h1 class="font-khand text-3xl text-main-black">
-                            @samuelyumaa
-                        </h1>
-                        <p class="font-jetbrains text-xl text-main-black">
-                            Programmer
-                        </p>
+                    <h1 class="font-khand text-3xl text-main-black">@mreezx</h1>
+                    <p class="font-jetbrains text-xl text-main-black">Programmer</p>
+                </div>
+                <div class="w-72 text-center">
+                    <div class="mx-auto">
+                        <img
+                            src="./src/img-creators/Yuma.jpg"
+                            alt="Yuma's photo"
+                            class="mb-4 h-auto max-w-full rounded-xl"
+                        />
                     </div>
-                    <div class="w-72 text-center">
-                        <div class="mx-auto">
-                            <img
-                                src="./public/img-creators/Jauhar.jpg"
-                                alt="Jauhar's photo"
-                                class="mb-4 h-auto max-w-full rounded-xl"
-                            />
-                        </div>
-                        <h1 class="font-khand text-3xl text-main-black">
-                            @jauhar.exe
-                        </h1>
-                        <p class="font-jetbrains text-xl text-main-black">
-                            Asset Designer
-                        </p>
+                    <h1 class="font-khand text-3xl text-main-black">@samuelyumaa</h1>
+                    <p class="font-jetbrains text-xl text-main-black">Programmer</p>
+                </div>
+                <div class="w-72 text-center">
+                    <div class="mx-auto">
+                        <img
+                            src="./src/img-creators/Jauhar.jpg"
+                            alt="Jauhar's photo"
+                            class="mb-4 h-auto max-w-full rounded-xl"
+                        />
                     </div>
+                    <h1 class="font-khand text-3xl text-main-black">@jauhar.exe</h1>
+                    <p class="font-jetbrains text-xl text-main-black">Asset Designer</p>
                 </div>
             </div>
         </section>
 
-        <section id="footer">
-            <!-- footer done -->
-            <h1
-                class="bg-main-black py-3 text-center font-khand text-xl font-semibold tracking-wide text-main-white"
-            >
-                ©2023 SackDash.
+        <footer>
+            <h1 class="bg-main-black py-3 text-center font-khand text-xl font-semibold tracking-wide text-main-white">
+                ©2024 SackDash.
             </h1>
-        </section>
+        </footer>
 
         <button
             style="
@@ -211,16 +148,356 @@
                 border-radius: 8px;
                 background-color: #fccb1d;
                 font-size: 24px;
-                box-shadow:
-                    0 10px 15px -3px rgb(0 0 0 / 0.1),
-                    0 4px 6px -4px rgb(0 0 0 / 0.1);
+                box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             "
             id="topBtn"
         >
             <i class="fa-solid fa-arrow-up" style="color: #313638"></i>
         </button>
-        <script type="text/javascript" src="./public/js/button.js"></script>
+
+        <script>
+            const backToTopBtn = (function () {
+                $(document).ready(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 40) {
+                            $("#topBtn").fadeIn();
+                        } else {
+                            $("#topBtn").fadeOut();
+                        }
+                    });
+
+                    $("#topBtn").click(function () {
+                        $("html ,body").animate({ scrollTop: 0 }, 1);
+                    });
+                });
+            })();
+
+            const mainGame = (function () {
+                const canvas = document.querySelector("canvas");
+                const c = canvas.getContext("2d");
+
+                canvas.width = 1024;
+                canvas.height = 576;
+
+                const backgroundImage = new Image();
+                backgroundImage.src = "./src/img-game/background.svg";
+
+                class Player {
+                    constructor() {
+                        this.velocity = {
+                            x: 0,
+                            y: 0,
+                        };
+
+                        const image = new Image();
+                        image.src = "./src/img-game/player.png";
+                        image.onload = () => {
+                            const scale = 1;
+                            this.image = image;
+                            this.width = image.width * scale;
+                            this.height = image.height * scale;
+                            this.position = {
+                                x: canvas.width / 2 - this.width / 57,
+                                y: canvas.height - this.height * 1.5,
+                            };
+                        };
+                        this.frames = 0;
+                    }
+
+                    // animated gif
+                    draw() {
+                        c.drawImage(
+                            // 997x940
+                            this.image,
+                            63.56 * this.frames,
+                            0,
+                            63.56,
+                            115,
+                            this.position.x,
+                            this.position.y,
+                            this.width / 25,
+                            this.height * 1.1
+                        );
+                    }
+
+                    update() {
+                        this.frames++;
+                        if (this.frames > 39) this.frames = 0;
+                        if (this.image) {
+                            this.draw();
+                            this.position.x += this.velocity.x;
+                        }
+                    }
+                }
+
+                class Obstacle {
+                    constructor() {
+                        this.velocity = {
+                            x: 0,
+                            y: 1,
+                        };
+
+                        const obstacleImages = [
+                            "./src/img-game/asset-1.png",
+                            "./src/img-game/asset-2.png",
+                            "./src/img-game/asset-3.png",
+                            "./src/img-game/asset-4.png",
+                            "./src/img-game/asset-5.png",
+                            "./src/img-game/asset-6.png",
+                            "./src/img-game/asset-7.png",
+                            "./src/img-game/asset-8.png",
+                        ];
+
+                        const selectedImageSrc = obstacleImages[Math.floor(Math.random() * obstacleImages.length)];
+
+                        const obstacleImage = new Image();
+                        obstacleImage.src = selectedImageSrc;
+                        obstacleImage.onload = () => {
+                            const scale = 0.12;
+                            this.image = obstacleImage;
+                            this.width = obstacleImage.width * scale;
+                            this.height = obstacleImage.height * scale;
+                            // setting posisi random
+                            this.position = {
+                                x: Math.random() * (650 - 280) + 280, // Random x-coordinate
+                                y: 0,
+                            };
+                        };
+                        this.passed = false;
+                    }
+
+                    draw() {
+                        c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+                    }
+
+                    update() {
+                        if (this.image) {
+                            this.draw();
+                            this.position.y += this.velocity.y;
+
+                            if (this.position.y > canvas.height) {
+                                obstacles.splice(obstacles.indexOf(this), 1);
+                            }
+                        }
+                    }
+                }
+
+                const obstacles = [];
+                const player = new Player();
+                const keys = {
+                    a: {
+                        pressed: false,
+                    },
+                    d: {
+                        pressed: false,
+                    },
+                };
+                let score = 0;
+                function detectCollision(a, b) {
+                    const playerTop = a.position.y;
+                    const playerBottom = a.position.y + a.height / 2;
+                    const playerLeft = a.position.x;
+                    const playerRight = a.position.x + a.width / 39; // Divided by the number of frames in the animation
+
+                    const obstacleTop = b.position.y;
+                    const obstacleBottom = b.position.y + b.height;
+                    const obstacleLeft = b.position.x;
+                    const obstacleRight = b.position.x + b.width / 2;
+
+                    return (
+                        playerBottom > obstacleTop && // Player's bottom is below obstacle's top
+                        playerTop < obstacleBottom && // Player's top is above obstacle's bottom
+                        playerRight > obstacleLeft && // Player's right is to the right of obstacle's left
+                        playerLeft < obstacleRight // Player's left is to the left of obstacle's right
+                    );
+                }
+
+                function stopBackgroundMusic() {
+                    const backgroundMusic = document.getElementById("backgroundMusic");
+                    backgroundMusic.pause();
+                    backgroundMusic.currentTime = 0; // Reset the playback position
+                }
+
+                function spawnObstacle() {
+                    const obstacle = new Obstacle();
+                    obstacles.push(obstacle);
+                }
+                // setting interval waktu
+                function spawnObstacleWithRandomTime() {
+                    spawnObstacle();
+                    const minSpawnInterval = 2000;
+                    const maxSpawnInterval = 4000;
+                    const randomTime = Math.random() * (maxSpawnInterval - minSpawnInterval) + minSpawnInterval;
+                    setTimeout(spawnObstacleWithRandomTime, randomTime);
+                }
+
+                function clearObstacles() {
+                    for (let i = obstacles.length - 1; i >= 0; i--) {
+                        if (obstacles[i].position.y >= canvas.height) {
+                            obstacles.splice(i, 1);
+                        }
+                    }
+                }
+
+                function playBackgroundMusic() {
+                    const backgroundMusic = document.getElementById("backgroundMusic");
+
+                    backgroundMusic.addEventListener("ended", () => {
+                        backgroundMusic.currentTime = 0; // Reset the playback position
+                        if (!gameOver) {
+                            backgroundMusic.play(); // Start playing from the beginning if the game is not over
+                        }
+                    });
+
+                    backgroundMusic.play(); // Start playing the music
+                }
+
+                let gameOver = false;
+                let timeSinceLastCollision = 0;
+                let playButtonHover = false;
+
+                function animate() {
+                    if (!gameOver) {
+                        playBackgroundMusic();
+                        requestAnimationFrame(animate);
+                        c.clearRect(0, 0, canvas.width, canvas.height);
+                        c.drawImage(backgroundImage, 0, 0);
+
+                        for (const obstacle of obstacles) {
+                            obstacle.update();
+                            if (detectCollision(player, obstacle)) {
+                                console.log("Collision detected!");
+                                gameOver = true;
+                                stopBackgroundMusic();
+                            }
+                        }
+
+                        // Increment the time since last collision
+                        timeSinceLastCollision += 16.67; // Roughly 60 frames per second
+
+                        // Update the score based on the time since last collision
+                        score = Math.floor(timeSinceLastCollision / 1000); // Convert to seconds
+
+                        // Update player's position
+                        player.update();
+
+                        if (keys.a.pressed && player.position.x >= 280) {
+                            player.velocity.x = -3;
+                        } else if (keys.d.pressed && player.position.x <= 650) {
+                            player.velocity.x = 3;
+                        } else {
+                            player.velocity.x = 0;
+                        }
+                    } else {
+                        // Darken the background with a black overlay
+                        c.fillStyle = "rgba(0, 0, 0, 0.5)";
+                        c.fillRect(0, 0, canvas.width, canvas.height);
+
+                        // Set the styles for the text
+                        c.fillStyle = "#ffffff";
+                        c.font = "72px Khand, Arial"; // Changed font size for the "Game Over" text
+                        const gameOverText = "Game Over!";
+                        const scoreText = "Score: " + score;
+                        const playAgainText1 = "Press one of the following keys to play again:";
+                        const playAgainText2 = "'a', 'd', arrow right, arrow left";
+
+                        const gameOverTextWidth = c.measureText(gameOverText).width;
+                        const scoreTextWidth = c.measureText(scoreText).width;
+                        const playAgainText1Width = c.measureText(playAgainText1).width;
+                        const playAgainText2Width = c.measureText(playAgainText2).width;
+
+                        const gameOverTextX = canvas.width / 2 - gameOverTextWidth / 2;
+                        const gameOverTextY = canvas.height / 2 - 60; // Adjusted Y position for vertical centering
+                        const scoreTextX = canvas.width / 2 - scoreTextWidth / 2 - 6;
+                        const scoreTextY = canvas.height / 2 + 15; // Adjusted Y position for vertical centering
+
+                        // Calculate the width of the longer line of playAgainText
+                        const maxPlayAgainTextWidth = Math.max(playAgainText1Width, playAgainText2Width);
+
+                        const playAgainText1X = canvas.width / 2 - maxPlayAgainTextWidth / 2 + 315; // Centered horizontally
+                        const playAgainText1Y = scoreTextY + 60; // Positioned under the score text
+                        const playAgainText2X = canvas.width / 2 - playAgainText2Width / 2 + 190; // Centered horizontally under playAgainText1
+                        const playAgainText2Y = playAgainText1Y + 30; // Positioned below playAgainText1
+
+                        // Draw the text on the canvas
+                        c.fillText(gameOverText, gameOverTextX, gameOverTextY);
+
+                        c.font = '48px "JetBrains Mono", Arial'; // Changed font and size for the score text
+                        c.fillText(scoreText, scoreTextX, scoreTextY); // Centered score text
+
+                        c.font = '20px "JetBrains Mono", Arial'; // Changed font and size for the play again text
+                        c.fillText(playAgainText1, playAgainText1X, playAgainText1Y);
+                        c.fillText(playAgainText2, playAgainText2X, playAgainText2Y); // Centered under playAgainText1
+                    }
+
+                    clearObstacles();
+                }
+
+                addEventListener("keydown", ({ key }) => {
+                    switch (key) {
+                        case "a":
+                            keys.a.pressed = true;
+                            if (gameOver) {
+                                player.position.x = canvas.width / 2 - player.width / 57;
+                                player.position.y = canvas.height - player.height * 1.5;
+                                obstacles.length = 0;
+                                gameOver = false;
+                                animate();
+                            }
+                            break;
+                        case "d":
+                            keys.d.pressed = true;
+                            if (gameOver) {
+                                player.position.x = canvas.width / 2 - player.width / 57;
+                                player.position.y = canvas.height - player.height * 1.5;
+                                obstacles.length = 0;
+                                gameOver = false;
+                                animate();
+                            }
+                            break;
+                        case "ArrowLeft":
+                            keys.a.pressed = true;
+                            if (gameOver) {
+                                player.position.x = canvas.width / 2 - player.width / 57;
+                                player.position.y = canvas.height - player.height * 1.5;
+                                obstacles.length = 0;
+                                gameOver = false;
+                                animate();
+                            }
+                            break;
+                        case "ArrowRight":
+                            keys.d.pressed = true;
+                            if (gameOver) {
+                                player.position.x = canvas.width / 2 - player.width / 57;
+                                player.position.y = canvas.height - player.height * 1.5;
+                                obstacles.length = 0;
+                                gameOver = false;
+                                animate();
+                            }
+                            break;
+                    }
+                });
+
+                addEventListener("keyup", ({ key }) => {
+                    switch (key) {
+                        case "a":
+                            keys.a.pressed = false;
+                            break;
+                        case "d":
+                            keys.d.pressed = false;
+                            break;
+                        case "ArrowLeft":
+                            keys.a.pressed = false;
+                            break;
+                        case "ArrowRight":
+                            keys.d.pressed = false;
+                            break;
+                    }
+                });
+
+                spawnObstacleWithRandomTime();
+                animate();
+            })();
+        </script>
     </body>
 </html>
-
-<!-- npm run build -->
